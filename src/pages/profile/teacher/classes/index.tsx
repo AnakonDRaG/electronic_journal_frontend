@@ -22,7 +22,7 @@ const Classes = () => {
 
       const response = await getClasses()
       if (response.success) {
-        setClasses(response.data['$values'])
+        setClasses([response.data.$values])
       }
 
       setIsLoaderShown(false)
@@ -32,29 +32,21 @@ const Classes = () => {
   return (
     <Page title="Classes">
       <Pane display="flex" flexDirection="column" gap={12}>
-        {classes?.map(_class => {
-          return (
-            <Card padding={24}>
-              <Heading marginBottom={12} size={700} textTransform={'uppercase'}>
-                {_class.name}
-              </Heading>
-              <Pane display="flex" flexDirection="row" gap={12}>
-                <Card background={theme.palette.blue.lightest}>
-                  <Heading marginBottom={12}>Teacher</Heading>
-                  <Text>
-                    {`${_class.classroomTeacher!.firstName} ${
-                      _class.classroomTeacher!.lastName
-                    }`}
-                  </Text>
-                </Card>
-                <Card background={theme.palette.blue.lightest}>
-                  <Heading marginBottom={12}>Headman</Heading>
-                  <Text>{_class.headman}</Text>
-                </Card>
-              </Pane>
+        <Card padding={24}>
+          <Heading marginBottom={12} size={700} textTransform={'uppercase'}>
+            Test
+          </Heading>
+          <Pane display="flex" flexDirection="row" gap={12}>
+            <Card background={theme.palette.blue.lightest}>
+              <Heading marginBottom={12}>Teacher</Heading>
+              <Text> Anakon Test</Text>
             </Card>
-          )
-        })}
+            <Card background={theme.palette.blue.lightest}>
+              <Heading marginBottom={12}>Headman</Heading>
+              <Text>qwe qwe</Text>
+            </Card>
+          </Pane>
+        </Card>
       </Pane>
     </Page>
   )

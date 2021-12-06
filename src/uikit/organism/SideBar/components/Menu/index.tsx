@@ -124,16 +124,6 @@ const Menu = ({ ...props }: MenuProps) => {
             onClick={async () => await logOut()}
           />
         )}
-
-        <MenuItem
-          text="TEST HANDLER"
-          icon={{ name: 'settings' }}
-          color={theme.palette.blue.base}
-          background={theme.palette.blue.lightest}
-          onClick={async () => {
-            const response = await getHumanData()
-          }}
-        />
       </MenuListContainer>
     </MenuContainer>
   )
