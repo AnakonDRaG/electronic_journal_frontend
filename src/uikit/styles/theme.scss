@@ -1,0 +1,30 @@
+@import "~bulma/sass/utilities/controls";
+@import "~bootstrap/scss/bootstrap-grid";
+
+html {
+  background-color: #EBF0FF;
+}
+
+body {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+::-webkit-scrollbar {
+  width: 24px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8f95b2;
+  border-radius: 18px;
+  border:8px solid #EBF0FF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #696f8c;
+}
